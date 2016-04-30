@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "A simple helper for Google Analytics",
-    "repository": "https://github.com/user://github.com/trotha01/elm-google-analytics",
+    "repository": "https://github.com/trotha01/elm-google-analytics.git",
     "license": "BSD3",
     "source-directories": [
         "."
