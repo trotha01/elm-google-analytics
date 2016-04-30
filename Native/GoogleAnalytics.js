@@ -12,9 +12,6 @@ Elm.Native.GoogleAnalytics.make = function(elm) {
 
   var values = {};
 
-  /* trackingID is something like 'UA-XXXXX-Y'
-   * https://support.google.com/analytics/answer/1032385
-  */
   values.analytics = function(trackingID) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
