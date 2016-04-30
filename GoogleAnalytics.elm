@@ -7,6 +7,7 @@ module GoogleAnalytics (..) where
 -}
 
 import Native.GoogleAnalytics
+import Task exposing (Task)
 
 
 {-| analytics takes a Google Tracking ID and sends website data to Google Analytics.
@@ -14,6 +15,6 @@ To find your Tracking ID, see: https://support.google.com/analytics/answer/10323
 
     analytics "UA-XXXXX-Y"
 -}
-analytics : String -> ()
+analytics : String -> Task () ()
 analytics trackingID =
   Native.GoogleAnalytics.analytics trackingID
