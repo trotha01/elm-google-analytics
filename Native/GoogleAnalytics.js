@@ -9,8 +9,6 @@ Elm.Native.GoogleAnalytics.make = function(elm) {
   var values = {};
 
   values.analytics = function(trackingID) {
-    console.log("here")
-
     return Task.asyncFunction(function(callback) {
       (function(w,d,s,u,ga,script,m) {
         w['GoogleAnalyticsObject']=ga;
