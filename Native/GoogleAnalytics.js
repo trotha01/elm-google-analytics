@@ -9,14 +9,22 @@ Elm.Native.GoogleAnalytics.make = function(elm) {
   var values = {};
 
   values.analytics = function(trackingID) {
+    console.log("here")
 
     return Task.asyncFunction(function(callback) {
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      (function(w,d,s,u,ga,script,m) {
+        w['GoogleAnalyticsObject']=ga;
+        w[ga] = w[ga] || function() {
+          ( w[ga].q = w[ga].q || [] ).push(arguments)
+        }, w[ga].l = 1*new Date();
+        script=d.createElement(s),
+        m=d.getElementsByTagName(s)[0];
+        script.async=1;
+        script.src=u;
+        m.parentNode.insertBefore(script,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('create', trackingID, 'auto');
       ga('send', 'pageview');
 
       Task.succeed()
