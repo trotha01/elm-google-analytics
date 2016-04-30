@@ -16,5 +16,5 @@ main =
 
 port runner : Task () ()
 port runner =
-  analytics "UA-36258407-2"
+  analytics "UA-XXXXX-Y"
 ```
