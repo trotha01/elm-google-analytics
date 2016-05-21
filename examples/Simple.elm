@@ -1,15 +1,57 @@
-module Main (..) where
+module Main exposing (..)
 
-import Signal
-import Task exposing (Task)
-import Graphics.Element exposing (show)
+import Html exposing (Html, text)
+import Html.App
 import GoogleAnalytics exposing (analytics)
 
 
+-- MODEL
+
+
+type alias Model =
+    Int
+
+
+model : Model
+model =
+    0
+
+
+
+-- UPDATE
+
+
+update msg model =
+    ( model, Cmd.none )
+
+
+
+-- VIEW
+
+
+view : Model -> Html msg
+view model =
+    text "hello world"
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub msg
+subscriptions model =
+    Sub.none
+
+
+
+-- Main
+
+
+main : Program Never
 main =
-  show "hello world"
-
-
-port runner : Task () ()
-port runner =
-  analytics "UA-36258407-2"
+    Html.App.program
+        { init = ( model, analytics "UA-36258407-2" )
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }

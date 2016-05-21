@@ -1,20 +1,16 @@
 # Elm-Google-Analytics
 
-A simple helper function for using Google Analytics in an Elm application
+A helper function for using Google Analytics in an Elm application
 
-## Example
+# Example
 ```
-import Signal
-import Task exposing (Task)
-import Graphics.Element exposing (show)
-import GoogleAnalytics exposing (analytics)
-
-
+main : Program Never
 main =
-  show "hello world"
-
-
-port runner : Task () ()
-port runner =
-  analytics "UA-XXXXX-Y"
+    Html.App.program
+        { init = ( model, analytics "UA-36258407-2" )
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }
 ```
+
