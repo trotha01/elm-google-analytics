@@ -1,4 +1,4 @@
-port module GoogleAnalytics exposing (..)
+module GoogleAnalytics exposing (..)
 
 {-| This library is an elm helper for using google analytics
 
@@ -6,8 +6,7 @@ port module GoogleAnalytics exposing (..)
 
 -}
 
-
-port sendID : String -> Cmd msg
+import Native.GoogleAnalytics
 
 
 {-| analytics takes a Google Tracking ID and sends website data to Google Analytics.
@@ -19,6 +18,6 @@ analytics : String -> Cmd msg
 analytics id =
     let
         _ =
-            Debug.log "analyze" ()
+            Native.GoogleAnalytics.analytics id
     in
-        analytics id
+        Cmd.none
