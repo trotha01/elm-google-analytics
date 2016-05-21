@@ -6750,12 +6750,13 @@ var _trotha01$elm_google_analytics$Main$update = F2(
 	function (msg, model) {
 		return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 	});
+var _trotha01$elm_google_analytics$Main$model = 0;
 var _trotha01$elm_google_analytics$Main$main = {
 	main: _elm_lang$html$Html_App$program(
 		{
 			init: {
 				ctor: '_Tuple2',
-				_0: 0,
+				_0: _trotha01$elm_google_analytics$Main$model,
 				_1: _trotha01$elm_google_analytics$GoogleAnalytics$analytics('UA-36258407-2')
 			},
 			update: _trotha01$elm_google_analytics$Main$update,
@@ -6763,7 +6764,6 @@ var _trotha01$elm_google_analytics$Main$main = {
 			subscriptions: _trotha01$elm_google_analytics$Main$subscriptions
 		})
 };
-var _trotha01$elm_google_analytics$Main$model = 0;
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 _elm_lang$core$Native_Platform.addPublicModule(Elm['Main'], 'Main', typeof _trotha01$elm_google_analytics$Main$main === 'undefined' ? null : _trotha01$elm_google_analytics$Main$main);

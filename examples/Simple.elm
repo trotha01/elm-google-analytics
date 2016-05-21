@@ -50,7 +50,7 @@ subscriptions model =
 main : Program Never
 main =
     Html.App.program
-        { init = ( 0, analytics "UA-36258407-2" )
+        { init = ( model, analytics "UA-36258407-2" )
         , update = update
         , view = view
         , subscriptions = subscriptions
