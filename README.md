@@ -2,8 +2,15 @@
 
 A helper function for using Google Analytics in an Elm application
 
-# Build
+# Example
 ```
-elm-make examples/Simple.elm --output=examples/build.js
+main : Program Never
+main =
+    Html.App.program
+        { init = ( 0, analytics "UA-36258407-2" )
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }
 ```
 
