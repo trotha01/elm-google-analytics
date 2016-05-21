@@ -2,8 +2,6 @@ var _trotha01$elm_google_analytics$Native_GoogleAnalytics = function(trackingID)
   var values = {};
 
   values.analytics = function() {
-    console.log("here");
-
     (function(w,d,s,u,ga,script,m) {
       w['GoogleAnalyticsObject']=ga;
       w[ga] = w[ga] || function() {
